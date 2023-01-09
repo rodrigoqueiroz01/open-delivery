@@ -7,3 +7,5 @@ target
 mvnw
 mvnw.cmd
 orders.iml
+
+src/main/resources/application.yaml

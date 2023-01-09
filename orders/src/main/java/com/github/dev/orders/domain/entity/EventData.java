@@ -16,26 +16,30 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "order_data", schema = "public")
-public class OrderData implements Serializable {
+@Table(name = "event_data", schema = "public")
+public class EventData implements Serializable {
 
     @Serial
     public static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public UUID orderId;
+    public UUID eventId;
+
+    @Column(name = "source_app_id", nullable = false)
+    private String sourceAppId;
+
+    @Column(name = "order_id", nullable = false)
+    private String orderId;
 
     @Column(name = "created_at")
-    public Date createdAt;
-
-    @Column(name = "merchant_id")
-    public String merchantId;
-
-    @Column(name = "source_app_id")
-    public String sourceAppId;
+    private Date createdAt;
 
     @Column
     public String data;
 
+    @Column(name = "ack_at")
+    private Date ackAt;
+
 }
+

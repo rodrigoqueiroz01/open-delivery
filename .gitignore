@@ -1,3 +1,5 @@
 .idea
 .jpb
 target
+
+orders/src/main/resources/application.yaml
