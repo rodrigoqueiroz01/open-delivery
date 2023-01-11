@@ -24,13 +24,13 @@ public class EventData implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public UUID eventId;
+    public UUID id;
 
     @Column(name = "source_app_id", nullable = false)
-    private String sourceAppId;
+    private UUID sourceAppId;
 
     @Column(name = "order_id", nullable = false)
-    private String orderId;
+    private UUID orderId;
 
     @Column(name = "created_at")
     private Date createdAt;

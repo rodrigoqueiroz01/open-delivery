@@ -24,13 +24,13 @@ public class OrderData implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public UUID orderId;
+    public UUID id;
 
     @Column(name = "created_at")
     public Date createdAt;
 
     @Column(name = "merchant_id")
-    public String merchantId;
+    public UUID merchantId;
 
     @Column(name = "source_app_id")
     public String sourceAppId;
